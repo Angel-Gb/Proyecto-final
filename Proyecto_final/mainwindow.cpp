@@ -6,8 +6,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    cargarnivel();
 
-    QPixmap background(":/fuentes/entorno/B1.png");
+
+}
+
+void MainWindow::cargarnivel()
+{
+    int nronivel=1;
+
+    QPixmap background(":/fuentes/entorno/B" + QString::number(nronivel) + ".png");
     background = background.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette back;
     back.setBrush(QPalette::Window, background);
@@ -19,10 +27,13 @@ MainWindow::MainWindow(QWidget *parent)
     scene->setBackgroundBrush(Qt::transparent);
     ui->graphicsView->setScene(scene);
 
+    juego.crearplataformas(nronivel);
+    for (Obstaculos* plataforma : juego.getplataformas())  {
+        scene->addItem(plataforma);
+    }
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-

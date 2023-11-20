@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QGraphicsScene>
+#include "juego.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,9 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
+    Juego juego;
+    void cargarnivel();
+
 
 
 };
