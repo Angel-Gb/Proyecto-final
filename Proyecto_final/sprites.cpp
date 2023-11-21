@@ -36,7 +36,7 @@ QRectF sprites::boundingRect() const
 
 void sprites::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,100,ancho,alto);
+    painter->drawPixmap(-ancho/2,-alto/2,*pixmap,columnas,0,ancho,alto);
 }
 
 

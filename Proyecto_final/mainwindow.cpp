@@ -7,8 +7,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    cargarnivel();
 
-    QPixmap background(":/fuentes/entorno/B1.png");
+
+}
+
+void MainWindow::cargarnivel()
+{
+    int nronivel=1;
+
+    QPixmap background(":/fuentes/entorno/B" + QString::number(nronivel) + ".png");
     background = background.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette back;
     back.setBrush(QPalette::Window, background);
@@ -20,25 +28,17 @@ MainWindow::MainWindow(QWidget *parent)
     scene->setBackgroundBrush(Qt::transparent);
     ui->graphicsView->setScene(scene);
 
+    juego.crearplataformas(nronivel);
+    for (Obstaculos* plataforma : juego.getplataformas())  {
+        scene->addItem(plataforma);
+    }
 
-    // Obtén la geometría de la pantalla principal
-    QScreen *screen = QApplication::primaryScreen();
-    QRect screenGeometry = screen->geometry();
-    int x = screenGeometry.x();
-    int y = screenGeometry.y();
-    int ancho = screenGeometry.width() - 100; // Ajusta según sea necesario
-    int alto = screenGeometry.height() - 100; // Ajusta según sea necesario
-
-    scene = new QGraphicsScene(x,y,ancho,alto);
-    ui->graphicsView->setScene(scene);
-    Donald = new sprites();
-    scene->addItem(Donald);
-
-    Donald->setPos(300,600);
+    Rick = new Personajes();
+    scene->addItem(Rick);
+    Rick->setPos(300,600);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-

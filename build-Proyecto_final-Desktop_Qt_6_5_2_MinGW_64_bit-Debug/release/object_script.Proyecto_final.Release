@@ -10,4 +10,5 @@ release/rick.o
 release/sprites.o
 release/qrc_graficos.o
 release/moc_mainwindow.o
+release/moc_personajes.o
 release/moc_sprites.o

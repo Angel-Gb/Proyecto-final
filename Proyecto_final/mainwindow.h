@@ -8,8 +8,9 @@
 #include <QRect>
 #include <QScreen>
 #include <QApplication>
+#include "juego.h"
 
-#include "sprites.h"
+#include "personajes.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,8 +27,11 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
+    Juego juego;
+    void cargarnivel();
 
-    sprites *Donald;
+
+    Personajes *Rick;
 
     float x,y,ancho,alto;
 

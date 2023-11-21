@@ -10,4 +10,5 @@ debug/rick.o
 debug/sprites.o
 debug/qrc_graficos.o
 debug/moc_mainwindow.o
+debug/moc_personajes.o
 debug/moc_sprites.o
