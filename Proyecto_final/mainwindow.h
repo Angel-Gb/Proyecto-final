@@ -3,7 +3,13 @@
 
 #include <QMainWindow>
 #include <QGraphicsScene>
+#include <QPainter>
+#include <QGraphicsItem>
+#include <QRect>
+#include <QScreen>
+#include <QApplication>
 
+#include "sprites.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,6 +27,9 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
 
+    sprites *Donald;
+
+    float x,y,ancho,alto;
 
 };
 #endif // MAINWINDOW_H
