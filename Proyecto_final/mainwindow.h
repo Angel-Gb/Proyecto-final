@@ -3,8 +3,14 @@
 
 #include <QMainWindow>
 #include <QGraphicsScene>
+#include <QPainter>
+#include <QGraphicsItem>
+#include <QRect>
+#include <QScreen>
+#include <QApplication>
 #include "juego.h"
 
+#include "personajes.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,13 +24,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void keyPressEvent(QKeyEvent *event);
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
     Juego juego;
     void cargarnivel();
-
-
+    Personajes *Rick;
+    float x,y,ancho,alto;
 
 };
 #endif // MAINWINDOW_H

@@ -1,0 +1,14 @@
+debug/arma.o
+debug/enemigos.o
+debug/juego.o
+debug/main.o
+debug/mainwindow.o
+debug/objeto_grafico.o
+debug/obstaculos.o
+debug/personajes.o
+debug/rick.o
+debug/sprites.o
+debug/qrc_graficos.o
+debug/moc_mainwindow.o
+debug/moc_personajes.o
+debug/moc_sprites.o
