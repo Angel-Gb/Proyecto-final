@@ -11,13 +11,13 @@
         <file>fuentes/entorno/Armas.png</file>
         <file>fuentes/entorno/B2.png</file>
         <file>fuentes/personajes/Rick.png</file>
-        <file>fuentes/entorno/P6.png</file>
-        <file>fuentes/entorno/P2.png</file>
+        <file>fuentes/entorno/B1.png</file>
         <file>fuentes/entorno/P1.png</file>
+        <file>fuentes/entorno/P2.png</file>
+        <file>fuentes/entorno/P3.png</file>
         <file>fuentes/entorno/P4.png</file>
         <file>fuentes/entorno/P5.png</file>
-        <file>fuentes/entorno/P3.png</file>
+        <file>fuentes/entorno/P6.png</file>
         <file>fuentes/entorno/P7.png</file>
-        <file>fuentes/entorno/B1.png</file>
     </qresource>
 </RCC>

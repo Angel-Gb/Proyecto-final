@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     cargarnivel();
 
-
 }
 
 void MainWindow::cargarnivel()
@@ -36,6 +35,7 @@ void MainWindow::cargarnivel()
     Rick = new Personajes();
     scene->addItem(Rick);
     Rick->setPos(200,500);
+    Rick->setScale(0.5);
 }
 
 
@@ -51,23 +51,31 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         if (actualp.x() - ran >= limitemov.left()){
             Rick->setPos(actualp.x() - ran, actualp.y());
             Rick->diract = Personajes::Left;
+            Rick->checkcol();
+
         }
         break;
     case Qt::Key_D:
         if (actualp.x() + ran <= limitemov.right()){
             Rick->setPos(actualp.x() + ran, actualp.y());
             Rick->diract = Personajes::Right;
+            Rick->checkcol();
+
         }
         break;
     case Qt::Key_W:
         if (actualp.y() - ran >= limitemov.top()){
             Rick->setPos(actualp.x(), actualp.y() - ran);
             Rick->diract = Personajes::Up;
+            Rick->checkcol();
+            Rick->salto();
         }
         break;
     case Qt::Key_S:
-        if (actualp.y() + ran <= limitemov.bottom())
+        if (actualp.y() + ran <= limitemov.bottom()){
             Rick->setPos(actualp.x(), actualp.y() + ran);
+            Rick->checkcol();
+}
         break;
     default:
         Rick->diract = Personajes::None;
