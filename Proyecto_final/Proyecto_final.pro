@@ -39,3 +39,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     graficos.qrc
+
+DISTFILES += \
+    fuentes/personajes/Enemy Blerg.png \
+    fuentes/personajes/Enemy Flargo.png \
+    fuentes/personajes/Enemy Gagigabber.png \
+    fuentes/personajes/Enemy Mortydrangea.png \
+    fuentes/personajes/Enemy Prax.png \
+    fuentes/personajes/Enemy Scary Terry.png \
+    fuentes/personajes/Enemy Shmupiedoop.png \
+    fuentes/personajes/Enemy Xqutoopikk.png
+
+

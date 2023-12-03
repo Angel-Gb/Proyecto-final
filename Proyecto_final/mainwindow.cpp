@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     cargarnivel();
 
 }
@@ -32,56 +33,58 @@ void MainWindow::cargarnivel()
         scene->addItem(plataforma);
     }
 
-    Rick = new Personajes();
-    scene->addItem(Rick);
-    Rick->setPos(200,500);
-    Rick->setScale(0.5);
+
+    rick = new Rick(":/fuentes/personajes/Rick.png");
+    scene->addItem(rick);
+    rick->setPos(200,500);
+    rick->setScale(0.5);
 }
 
 
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     scene->setSceneRect(0, 0, 800, 500);
-    QPointF actualp = Rick->pos();
+    QPointF actualp = rick->pos();
     qreal ran = 10.0;
     QRectF limitemov = scene->sceneRect();
 
     switch (event->key()) {
     case Qt::Key_A:
         if (actualp.x() - ran >= limitemov.left()){
-            Rick->setPos(actualp.x() - ran, actualp.y());
-            Rick->diract = Personajes::Left;
-            Rick->checkcol();
+            rick->setPos(actualp.x() - ran, actualp.y());
+            rick->diract = Personajes::Left;
+            rick->checkcol();
 
         }
         break;
     case Qt::Key_D:
         if (actualp.x() + ran <= limitemov.right()){
-            Rick->setPos(actualp.x() + ran, actualp.y());
-            Rick->diract = Personajes::Right;
-            Rick->checkcol();
+            rick->setPos(actualp.x() + ran, actualp.y());
+            rick->diract = Personajes::Right;
+            rick->checkcol();
 
         }
         break;
     case Qt::Key_W:
         if (actualp.y() - ran >= limitemov.top()){
-            Rick->setPos(actualp.x(), actualp.y() - ran);
-            Rick->diract = Personajes::Up;
-            Rick->checkcol();
-            Rick->salto();
+            rick->setPos(actualp.x(), actualp.y() - ran);
+            rick->diract = Personajes::Up;
+            rick->checkcol();
+            rick->salto();
         }
         break;
     case Qt::Key_S:
         if (actualp.y() + ran <= limitemov.bottom()){
-            Rick->setPos(actualp.x(), actualp.y() + ran);
-            Rick->checkcol();
+            rick->setPos(actualp.x(), actualp.y() + ran);
+            rick->checkcol();
 }
         break;
     default:
-        Rick->diract = Personajes::None;
+        rick->diract = Personajes::None;
         break;
     }
 }
+
 
 
 MainWindow::~MainWindow()

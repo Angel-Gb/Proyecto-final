@@ -8,5 +8,4 @@ Obstaculos::Obstaculos(int x, int y, int plataformaN) : QGraphicsPixmapItem()
     int height = plataformaPixmap.height() * 0.5;
     setPixmap(plataformaPixmap.scaled(width, height));
     setPos(x, y);
-
 }

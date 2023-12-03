@@ -11,10 +11,9 @@
 class Personajes : public QObject, public QGraphicsItem
 {
     Q_OBJECT
+
 public:
-    explicit Personajes(QObject *parent = nullptr);
-
-
+    explicit Personajes(const QString &spritePath, QObject *parent = nullptr);
     enum Dir { None, Left, Right, Up, Down };
     Dir diract;
 
@@ -29,17 +28,20 @@ public:
     void checkcol();
     QPointF anpos;
 
+
 signals:
+
 
 public slots:
     void Actualizacion();
     void salto();
+    void aplicarGravedad();
 
 
 private:
     bool saltando;
     qreal yorig = 500;
-
+    bool checkcold();
 
 };
 #endif // PERSONAJES_H

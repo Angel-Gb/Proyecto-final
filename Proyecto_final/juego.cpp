@@ -43,8 +43,48 @@ void Juego::crearplataformas(int nronivel)
     }
 }
 
+
 const QList<Obstaculos*>& Juego::getplataformas()
 {
     return plataformas;
 }
 
+
+void Juego::crearEnemigos(int nronivel)
+{
+    int x = 0;
+    int y = 0;
+
+    if (nronivel == 1) {
+
+        int disty = 70;
+        int distx = 80;
+
+        for (int i = 1; i < 8; i++) {
+            Enemigos* enemigo = new Enemigos(":/fuentes/entorno/Enemy",x, y - 20, 1);
+            enemigos.append(enemigo);
+            x += distx;
+            y += disty;
+        }
+    }
+
+    else if (nronivel == 2) {
+
+        int disty = 80;
+        int distx = 250;
+
+        for (int i = 1; i < 8; i++) {
+            if (i % 2 == 0) {
+                x -= distx * 2;
+            }
+
+            Enemigos* enemigo = new Enemigos(":/fuentes/entorno/Enemy",x, y - 20, 1);
+            enemigos.append(enemigo);
+            Enemigos* enemigo2 = new Enemigos(":/fuentes/entorno/Enemy",x + distx, y + disty - 20, 1);
+            enemigos.append(enemigo2);
+            x += distx;
+            y += disty;
+
+        }
+    }
+}
