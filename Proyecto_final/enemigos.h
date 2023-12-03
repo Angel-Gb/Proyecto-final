@@ -4,17 +4,28 @@
 #include <QGraphicsPixmapItem>
 #include <QObject>
 #include <QTimer>
+#include "personajes.h"
 
-
-class Enemigos : public QObject, public QGraphicsPixmapItem
+class Enemigos : public Personajes
 {
     Q_OBJECT
 
 public:
 
-    Enemigos(const QString &spritePath, int x, int y, int tipoEnemigo, QObject *parent = nullptr);
+    Enemigos(const QString &spritePath, int x, int y, QObject *parent = nullptr);
+    qreal getinipos() const;
 
 public slots:
+
+private slots:
+    void comportamiento();
+
+
+private:
+
+    int direccion;
+    int distanciarec;
+    int distanciamax;
 
 };
 

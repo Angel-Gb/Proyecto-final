@@ -61,7 +61,7 @@ void Juego::crearEnemigos(int nronivel)
         int distx = 80;
 
         for (int i = 1; i < 8; i++) {
-            Enemigos* enemigo = new Enemigos(":/fuentes/entorno/Enemy",x, y - 20, 1);
+            Enemigos* enemigo = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x+10, y-20);
             enemigos.append(enemigo);
             x += distx;
             y += disty;
@@ -78,9 +78,9 @@ void Juego::crearEnemigos(int nronivel)
                 x -= distx * 2;
             }
 
-            Enemigos* enemigo = new Enemigos(":/fuentes/entorno/Enemy",x, y - 20, 1);
+            Enemigos* enemigo = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x, y-50);
             enemigos.append(enemigo);
-            Enemigos* enemigo2 = new Enemigos(":/fuentes/entorno/Enemy",x + distx, y + disty - 20, 1);
+            Enemigos* enemigo2 = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x, y-50);
             enemigos.append(enemigo2);
             x += distx;
             y += disty;

@@ -33,6 +33,10 @@ void MainWindow::cargarnivel()
         scene->addItem(plataforma);
     }
 
+    juego.crearEnemigos(nronivel);
+    for (Enemigos* enemigo : juego.obtenerEnemigos()) {
+        scene->addItem(enemigo);
+    }
 
     rick = new Rick(":/fuentes/personajes/Rick.png");
     scene->addItem(rick);
