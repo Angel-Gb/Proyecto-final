@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::cargarnivel()
 {
-    int nronivel=1;
+    int nronivel=2;
 
     QPixmap background(":/fuentes/entorno/B" + QString::number(nronivel) + ".png");
     background = background.scaled(this->size(), Qt::IgnoreAspectRatio);
@@ -35,7 +35,12 @@ void MainWindow::cargarnivel()
 
     Rick = new Personajes();
     scene->addItem(Rick);
-    Rick->setPos(300,600);
+    Rick->setPos(200,530);
+    //
+//    QTimer *gameTimer = new QTimer(this);
+//    connect(gameTimer, &QTimer::timeout, Rick, &Personajes::Actualizacion);
+//    gameTimer->start(16); // Comienza el bucle del juego para actualizar a 60 FPS
+
 }
 
 MainWindow::~MainWindow()

@@ -17,8 +17,7 @@ SOURCES += \
     objeto_grafico.cpp \
     obstaculos.cpp \
     personajes.cpp \
-    rick.cpp \
-    sprites.cpp
+    rick.cpp
 
 HEADERS += \
     arma.h \
@@ -28,8 +27,7 @@ HEADERS += \
     objeto_grafico.h \
     obstaculos.h \
     personajes.h \
-    rick.h \
-    sprites.h
+    rick.h
 
 FORMS += \
     mainwindow.ui

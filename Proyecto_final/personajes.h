@@ -6,6 +6,8 @@
 #include <QTimer>
 #include <QPixmap>
 #include <QPainter>
+#include <QGraphicsScene>
+
 
 
 class Personajes : public QObject, public QGraphicsItem
@@ -14,7 +16,9 @@ class Personajes : public QObject, public QGraphicsItem
 public:
     explicit Personajes(QObject *parent = nullptr);
 
-
+    /*
+    float velocidadY; // Velocidad vertical del personaje
+    static constexpr float gravedad = 9.8f; // Aceleración debida a la gravedad (ajustable)*/
 
     QTimer *timer;
     QPixmap *pixmap;
@@ -26,6 +30,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
 signals:
+    //void tocandoSuelo(); // Señal cuando el personaje toca el suelo
 
 public slots:
     void Actualizacion();

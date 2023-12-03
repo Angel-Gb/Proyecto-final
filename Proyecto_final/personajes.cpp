@@ -5,6 +5,9 @@ Personajes::Personajes(QObject *parent)
 {
     timer = new QTimer();
 
+    //timer->start(); // Iniciar el temporizador
+    //velocidadY = 0; // Inicializar la velocidad vertical
+
     filas = 0;
     columnas = 0;
     pixmap = new QPixmap(":/fuentes/personajes/Rick.png");
@@ -21,6 +24,33 @@ Personajes::Personajes(QObject *parent)
 
 void Personajes::Actualizacion()
 {
+
+//    const float deltaTime = 120.0 / 1000.0; // Convertimos ms a segundos
+
+
+//    // Aplicar gravedad
+//    velocidadY += gravedad * deltaTime;
+//    float newY = y() + velocidadY * deltaTime;
+//    // Detectar colisiones
+//    QList<QGraphicsItem *> itemsColisionados = scene()->collidingItems(this);
+//    bool enElSuelo = false;
+//    foreach (QGraphicsItem *item, itemsColisionados) {
+//        //determinar cómo identificar el suelo u otros elementos con los que colisiona
+//        if (/* item es el suelo u obstáculo */) {
+//            enElSuelo = true;
+//            newY = /* altura del suelo */ - boundingRect().height(); // Ajustar la posición Y
+//            velocidadY = 0; // Detener la caída
+//            emit tocandoSuelo(); // Emitir la señal si es necesario
+//        break;
+//    }
+//}
+
+//    // Aplicar la nueva posición
+//    if (!enElSuelo) {
+//    setPos(x(), newY);
+//    }
+
+    //
     columnas += 100;
     if(columnas >= 600)
     {
