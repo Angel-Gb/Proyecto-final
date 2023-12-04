@@ -6,3 +6,7 @@ Rick::Rick(const QString &spritePath, QObject *parent) : Personajes(spritePath, 
 
 }
 
+QPointF Rick::getpos() const
+{
+    return pos();
+}

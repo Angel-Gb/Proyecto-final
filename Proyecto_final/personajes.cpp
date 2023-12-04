@@ -77,8 +77,6 @@ void Personajes::checkcol()
 }
 
 
-
-
 void Personajes::salto()
 {
     if (!saltando) {
@@ -103,3 +101,4 @@ void Personajes::salto()
         tsalto->start(30);
     }
 }
+

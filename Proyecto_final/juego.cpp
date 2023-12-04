@@ -78,13 +78,18 @@ void Juego::crearEnemigos(int nronivel)
                 x -= distx * 2;
             }
 
-            Enemigos* enemigo = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x, y-50);
+            Enemigos* enemigo = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x+10, y-20);
             enemigos.append(enemigo);
-            Enemigos* enemigo2 = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x, y-50);
+            Enemigos* enemigo2 = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x+10, y-20);
             enemigos.append(enemigo2);
             x += distx;
             y += disty;
 
         }
     }
+}
+
+const QList<Enemigos*>& Juego::getenemigos()
+{
+    return enemigos;
 }

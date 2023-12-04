@@ -35,13 +35,14 @@ signals:
 public slots:
     void Actualizacion();
     void salto();
-    void aplicarGravedad();
 
 
 private:
     bool saltando;
     qreal yorig = 500;
     bool checkcold();
+    QTimer* tsalto;
+
 
 };
 #endif // PERSONAJES_H

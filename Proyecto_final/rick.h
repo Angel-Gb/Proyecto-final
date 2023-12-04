@@ -10,6 +10,7 @@ class Rick: public Personajes
 
 public:
     explicit Rick(const QString &spritePath, QObject *parent = nullptr);
+    QPointF getpos() const;
 };
 
 #endif // RICK_H

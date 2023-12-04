@@ -8,6 +8,7 @@ release/obstaculos.o
 release/personajes.o
 release/rick.o
 release/qrc_graficos.o
+release/moc_arma.o
 release/moc_enemigos.o
 release/moc_mainwindow.o
 release/moc_personajes.o

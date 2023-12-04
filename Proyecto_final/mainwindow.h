@@ -12,7 +12,7 @@
 
 #include "personajes.h"
 #include "rick.h"
-
+#include "arma.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -33,6 +33,9 @@ private:
     QGraphicsScene *scene;
     Juego juego;
     void cargarnivel();
+    void cargarpersonajes();
+    int nronivel=1;
+    Arma *arma;
     Rick *rick;
     float x,y,ancho,alto;
 

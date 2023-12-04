@@ -14,7 +14,7 @@ public:
     void crearplataformas(int nronivel);
     const QList<Obstaculos*>& getplataformas();
     void crearEnemigos(int nronivel);
-    QList<Enemigos*> obtenerEnemigos() const { return enemigos; }
+    const QList<Enemigos*>& getenemigos();
 
 
 private:

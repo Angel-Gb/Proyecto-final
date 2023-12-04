@@ -8,14 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    cargarnivel();
-
+    cargarnivel();    
 }
 
 void MainWindow::cargarnivel()
 {
-    int nronivel=1;
-
     QPixmap background(":/fuentes/entorno/B" + QString::number(nronivel) + ".png");
     background = background.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette back;
@@ -33,15 +30,8 @@ void MainWindow::cargarnivel()
         scene->addItem(plataforma);
     }
 
-    juego.crearEnemigos(nronivel);
-    for (Enemigos* enemigo : juego.obtenerEnemigos()) {
-        scene->addItem(enemigo);
-    }
+    cargarpersonajes();
 
-    rick = new Rick(":/fuentes/personajes/Rick.png");
-    scene->addItem(rick);
-    rick->setPos(200,500);
-    rick->setScale(0.5);
 }
 
 
@@ -90,6 +80,24 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 }
 
 
+
+void MainWindow::cargarpersonajes()
+{
+    juego.crearEnemigos(nronivel);
+    for (Enemigos* enemigo : juego.getenemigos()) {
+        scene->addItem(enemigo);
+    }
+
+    rick = new Rick(":/fuentes/personajes/Rick.png");
+    scene->addItem(rick);
+    rick->setPos(200, 500);
+    rick->setScale(0.5);
+
+    Arma* arma = new Arma(rick);
+    scene->addItem(arma);
+    arma->setPos(rick->x() + rick->pixmap->width() / 2, rick->y());
+    arma->startTimer(30);
+}
 
 MainWindow::~MainWindow()
 {
