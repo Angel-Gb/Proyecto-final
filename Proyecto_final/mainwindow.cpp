@@ -8,7 +8,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    cargarnivel();    
+    cargarnivel();
+    arma = new Arma(rick);
+    scene->addItem(arma);
+    arma->startTimer(30);
 }
 
 void MainWindow::cargarnivel()
@@ -73,6 +76,10 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
             rick->checkcol();
 }
         break;
+
+    case Qt::Key_X:
+            arma->disparar();
+            break;
     default:
         rick->diract = Personajes::None;
         break;
@@ -93,10 +100,6 @@ void MainWindow::cargarpersonajes()
     rick->setPos(200, 500);
     rick->setScale(0.5);
 
-    Arma* arma = new Arma(rick);
-    scene->addItem(arma);
-    arma->setPos(rick->x() + rick->pixmap->width() / 2, rick->y());
-    arma->startTimer(30);
 }
 
 MainWindow::~MainWindow()

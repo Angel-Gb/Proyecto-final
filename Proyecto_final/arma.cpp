@@ -1,14 +1,10 @@
 #include "arma.h"
 #include <QGraphicsScene>
 
-
 Arma::Arma(Rick *personaje, QObject *parent)
     : QObject(parent), QGraphicsPixmapItem(), personaje(personaje)
 {
 
-    QTimer *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &Arma::disparar);
-    timer->start(1000);
 }
 
 void Arma::disparar()
@@ -16,7 +12,7 @@ void Arma::disparar()
     QPointF principalpos = personaje->getpos();
 
     QGraphicsPixmapItem *proyectil = new QGraphicsPixmapItem(QPixmap(":/fuentes/entorno/Shot.png"));
-    proyectil->setPos(principalpos.x() + personaje->pixmap->width() / 2, principalpos.y());
+    proyectil->setPos(principalpos.x(), principalpos.y());
     scene()->addItem(proyectil);
 
     QTimer *timerproy = new QTimer(this);
