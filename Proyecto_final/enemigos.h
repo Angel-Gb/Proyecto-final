@@ -15,6 +15,8 @@ public:
     Enemigos(const QString &spritePath, int x, int y, QObject *parent = nullptr);
     qreal getinipos() const;
 
+
+
 public slots:
 
 private slots:

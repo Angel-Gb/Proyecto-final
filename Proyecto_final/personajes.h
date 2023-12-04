@@ -29,13 +29,16 @@ public:
     QPointF anpos;
 
 
-signals:
 
+signals:
+    //nuevo
+    void personajeEliminado(Personajes* personaje);
 
 public slots:
     void Actualizacion();
     void salto();
-
+    //nuevo
+    void verificarColisionConProyectil();
 
 private:
     bool saltando;

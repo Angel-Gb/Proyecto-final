@@ -15,6 +15,9 @@ void Arma::disparar()
     QGraphicsPixmapItem *proyectil = new QGraphicsPixmapItem(QPixmap(":/fuentes/entorno/Shot.png"));
     proyectil->setPos(principalpos.x(), principalpos.y());
     proyectil->setScale(0.5);
+    //nuevo
+    proyectil->setData(0, QVariant("proyectil"));
+
     scene()->addItem(proyectil);
 
     QTimer *timerproy = new QTimer(this);
