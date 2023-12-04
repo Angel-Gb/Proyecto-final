@@ -1,23 +1,24 @@
 <RCC>
     <qresource prefix="/">
-        <file>fuentes/personajes/Enemy Blerg.png</file>
-        <file>fuentes/personajes/Enemy Flargo.png</file>
-        <file>fuentes/personajes/Enemy Gagigabber.png</file>
-        <file>fuentes/personajes/Enemy Mortydrangea.png</file>
-        <file>fuentes/personajes/Enemy Prax.png</file>
-        <file>fuentes/personajes/Enemy Shmupiedoop.png</file>
-        <file>fuentes/personajes/Enemy Xqutoopikk.png</file>
-        <file>fuentes/personajes/Enemy Scary Terry.png</file>
         <file>fuentes/entorno/Armas.png</file>
+        <file>fuentes/entorno/B1.png</file>
         <file>fuentes/entorno/B2.png</file>
-        <file>fuentes/personajes/Rick.png</file>
-        <file>fuentes/entorno/P6.png</file>
-        <file>fuentes/entorno/P2.png</file>
         <file>fuentes/entorno/P1.png</file>
+        <file>fuentes/entorno/P2.png</file>
+        <file>fuentes/entorno/P3.png</file>
         <file>fuentes/entorno/P4.png</file>
         <file>fuentes/entorno/P5.png</file>
-        <file>fuentes/entorno/P3.png</file>
+        <file>fuentes/entorno/P6.png</file>
         <file>fuentes/entorno/P7.png</file>
-        <file>fuentes/entorno/B1.png</file>
+        <file>fuentes/entorno/Shot.png</file>
+        <file>fuentes/personajes/Enemy1.png</file>
+        <file>fuentes/personajes/Enemy2.png</file>
+        <file>fuentes/personajes/Enemy3.png</file>
+        <file>fuentes/personajes/Enemy4.png</file>
+        <file>fuentes/personajes/Enemy5.png</file>
+        <file>fuentes/personajes/Enemy6.png</file>
+        <file>fuentes/personajes/Enemy7.png</file>
+        <file>fuentes/personajes/Enemy8.png</file>
+        <file>fuentes/personajes/Rick.png</file>
     </qresource>
 </RCC>

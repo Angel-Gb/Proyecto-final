@@ -3,12 +3,12 @@ release/enemigos.o
 release/juego.o
 release/main.o
 release/mainwindow.o
-release/objeto_grafico.o
 release/obstaculos.o
 release/personajes.o
 release/rick.o
-release/sprites.o
 release/qrc_graficos.o
+release/moc_arma.o
+release/moc_enemigos.o
 release/moc_mainwindow.o
 release/moc_personajes.o
-release/moc_sprites.o
+release/moc_rick.o

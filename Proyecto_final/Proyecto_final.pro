@@ -14,22 +14,18 @@ SOURCES += \
     juego.cpp \
     main.cpp \
     mainwindow.cpp \
-    objeto_grafico.cpp \
     obstaculos.cpp \
     personajes.cpp \
-    rick.cpp \
-    sprites.cpp
+    rick.cpp
 
 HEADERS += \
     arma.h \
     enemigos.h \
     juego.h \
     mainwindow.h \
-    objeto_grafico.h \
     obstaculos.h \
     personajes.h \
-    rick.h \
-    sprites.h
+    rick.h
 
 FORMS += \
     mainwindow.ui
@@ -41,3 +37,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     graficos.qrc
+
+DISTFILES += \
+    fuentes/personajes/Enemy Blerg.png \
+    fuentes/personajes/Enemy Flargo.png \
+    fuentes/personajes/Enemy Gagigabber.png \
+    fuentes/personajes/Enemy Mortydrangea.png \
+    fuentes/personajes/Enemy Prax.png \
+    fuentes/personajes/Enemy Scary Terry.png \
+    fuentes/personajes/Enemy Shmupiedoop.png \
+    fuentes/personajes/Enemy Xqutoopikk.png

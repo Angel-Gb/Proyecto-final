@@ -11,10 +11,11 @@
 class Personajes : public QObject, public QGraphicsItem
 {
     Q_OBJECT
+
 public:
-    explicit Personajes(QObject *parent = nullptr);
-
-
+    explicit Personajes(const QString &spritePath, QObject *parent = nullptr);
+    enum Dir { None, Left, Right, Up, Down };
+    Dir diract;
 
     QTimer *timer;
     QPixmap *pixmap;
@@ -23,12 +24,25 @@ public:
     float ancho;
     float alto;
     QRectF boundingRect() const;
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *);
+    void checkcol();
+    QPointF anpos;
+
 
 signals:
 
+
 public slots:
     void Actualizacion();
+    void salto();
+
+
+private:
+    bool saltando;
+    qreal yorig = 500;
+    bool checkcold();
+    QTimer* tsalto;
+
 
 };
 #endif // PERSONAJES_H
