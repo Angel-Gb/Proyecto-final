@@ -65,7 +65,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     case Qt::Key_W:
         if (actualp.y() - ran >= limitemov.top()){
             rick->setPos(actualp.x(), actualp.y() - ran);
-            rick->diract = Personajes::Up;
             rick->checkcol();
             rick->salto();
         }
@@ -74,14 +73,13 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         if (actualp.y() + ran <= limitemov.bottom()){
             rick->setPos(actualp.x(), actualp.y() + ran);
             rick->checkcol();
-}
+        }
         break;
-
-    case Qt::Key_X:
+    case Qt::Key_Space:
             arma->disparar();
             break;
     default:
-        rick->diract = Personajes::None;
+        rick->diract = Personajes::Up;
         break;
     }
 }

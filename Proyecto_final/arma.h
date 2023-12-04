@@ -16,6 +16,7 @@ public slots:
 
 private:
     Rick *personaje;
+
 };
 
 #endif // ARMA_H

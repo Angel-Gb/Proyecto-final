@@ -3,7 +3,6 @@ release/enemigos.o
 release/juego.o
 release/main.o
 release/mainwindow.o
-release/objeto_grafico.o
 release/obstaculos.o
 release/personajes.o
 release/rick.o

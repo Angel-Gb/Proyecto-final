@@ -14,7 +14,6 @@ SOURCES += \
     juego.cpp \
     main.cpp \
     mainwindow.cpp \
-    objeto_grafico.cpp \
     obstaculos.cpp \
     personajes.cpp \
     rick.cpp
@@ -24,7 +23,6 @@ HEADERS += \
     enemigos.h \
     juego.h \
     mainwindow.h \
-    objeto_grafico.h \
     obstaculos.h \
     personajes.h \
     rick.h
