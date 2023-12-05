@@ -27,6 +27,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *);
     void checkcol();
     QPointF anpos;
+    void gravedad();
 
 
 signals:
@@ -40,9 +41,8 @@ public slots:
 private:
     bool saltando;
     qreal yorig = 500;
-    bool checkcold();
     QTimer* tsalto;
-
+    qreal velocidadY;
 
 };
 #endif // PERSONAJES_H
