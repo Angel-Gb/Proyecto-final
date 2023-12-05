@@ -1,10 +1,10 @@
 #ifndef ARMA_H
 #define ARMA_H
 
-#include "rick.h"
 #include <QGraphicsPixmapItem>
 #include <QObject>
 #include "enemigos.h"
+#include "rick.h"
 
 class Arma : public QObject, public QGraphicsPixmapItem
 {
@@ -17,7 +17,6 @@ public slots:
 
 private:
     Rick *personaje;
-
 };
 
 #endif // ARMA_H

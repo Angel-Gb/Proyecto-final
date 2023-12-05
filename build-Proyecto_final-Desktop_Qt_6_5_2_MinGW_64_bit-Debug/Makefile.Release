@@ -1021,7 +1021,20 @@ release/enemigos.o: ../Proyecto_final/enemigos.cpp ../Proyecto_final/enemigos.h 
 		D:/Qt/5.12.2/mingw73_64/include/QtGui/qbrush.h \
 		D:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
 		D:/Qt/5.12.2/mingw73_64/include/QtGui/qfont.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h
+		D:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
+		../Proyecto_final/arma.h \
+		../Proyecto_final/rick.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtGui/QKeyEvent \
+		D:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
+		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsScene \
+		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\enemigos.o ..\Proyecto_final\enemigos.cpp
 
 release/juego.o: ../Proyecto_final/juego.cpp ../Proyecto_final/juego.h \

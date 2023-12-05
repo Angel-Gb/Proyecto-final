@@ -5,6 +5,7 @@
 #include <QObject>
 #include <QTimer>
 #include "personajes.h"
+#include "arma.h"
 
 class Enemigos : public Personajes
 {
@@ -13,7 +14,9 @@ class Enemigos : public Personajes
 public:
 
     Enemigos(const QString &spritePath, int x, int y, QObject *parent = nullptr);
+    ~Enemigos();
     qreal getinipos() const;
+    void disparar();
 
 public slots:
 
@@ -26,7 +29,7 @@ private:
     int direccion;
     int distanciarec;
     int distanciamax;
-
+    QTimer *timerDisparo;
 };
 
 #endif // ENEMIGOS_H
