@@ -20,6 +20,9 @@ public:
     QTimer *timer;
     QPixmap *pixmap;
 
+    //nuevo
+    int puntosVida;
+
     float filas,columnas;
     float ancho;
     float alto;

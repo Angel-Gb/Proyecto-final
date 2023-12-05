@@ -1,5 +1,6 @@
 #include "personajes.h"
 #include "obstaculos.h"
+#include <QGraphicsScene>
 
 Personajes::Personajes(const QString &spritePath, QObject *parent)
     : QObject{parent}
@@ -101,7 +102,7 @@ void Personajes::salto()
         tsalto->start(30);
     }
 }
-//
+// nuevo
 void Personajes::verificarColisionConProyectil() {
     QList<QGraphicsItem*> items = scene()->collidingItems(this);
     foreach(QGraphicsItem* item, items) {
@@ -113,7 +114,7 @@ void Personajes::verificarColisionConProyectil() {
 
             if (puntosVida <= 0) {
                 // señal para manejar la eliminación
-                emit personajeEliminado();  // Suponiendo que tienes esta señal en la clase Personajes
+                emit personajeEliminado(this);  // Suponiendo que tienes esta señal en la clase Personajes
                 scene()->removeItem(this);
                 delete this;
                 return;
@@ -122,4 +123,4 @@ void Personajes::verificarColisionConProyectil() {
     }
 }
 
-// llamar a este método en el ciclo principal
+ //llamar a este método en el ciclo principal
