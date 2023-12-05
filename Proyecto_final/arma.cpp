@@ -1,6 +1,5 @@
 #include "arma.h"
 #include <QGraphicsScene>
-
 Arma::Arma(Rick *personaje, QObject *parent)
     : QObject(parent), QGraphicsPixmapItem(), personaje(personaje)
 {
@@ -32,6 +31,26 @@ void Arma::disparar()
         default:
             break;
         }
+
+        QList<QGraphicsItem*> colisiones = proyectil->collidingItems();
+        QList<QGraphicsItem*>::iterator it;
+
+        for (it = colisiones.begin(); it != colisiones.end(); ++it) {
+            QGraphicsItem* item = *it;
+
+            if (Enemigos* enemigo = dynamic_cast<Enemigos*>(item)) {
+                scene()->removeItem(enemigo);
+                delete enemigo;
+
+                scene()->removeItem(proyectil);
+                delete proyectil;
+
+                timerproy->stop();
+                timerproy->deleteLater();
+                return;
+            }
+        }
+
         if (proyectil->x() > scene()->sceneRect().right() || proyectil->y() > scene()->sceneRect().bottom()) {
             scene()->removeItem(proyectil);
             delete proyectil;

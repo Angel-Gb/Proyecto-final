@@ -4,6 +4,7 @@
 #include "rick.h"
 #include <QGraphicsPixmapItem>
 #include <QObject>
+#include "enemigos.h"
 
 class Arma : public QObject, public QGraphicsPixmapItem
 {

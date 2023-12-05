@@ -26,17 +26,16 @@ void Juego::crearplataformas(int nronivel)
 
     else if (nronivel == 2) {
 
-        int disty = 80;
-        int distx = 250;
+        int disty = 70;
+        int distx = 200;
 
         for (int i = 1; i < 8; i++) {
             if (i%2==0){
-                x -= distx * 2;
+                x -= distx;
             }
             Obstaculos* plataforma = new Obstaculos(x, y, i);
             plataformas.append(plataforma);
-            Obstaculos* plataforma2 = new Obstaculos(x+distx, y+disty, i + 1);
-            plataformas.append(plataforma2);
+
             x += distx;
             y += disty;
         }
@@ -70,18 +69,16 @@ void Juego::crearEnemigos(int nronivel)
 
     else if (nronivel == 2) {
 
-        int disty = 80;
-        int distx = 250;
+        int disty = 70;
+        int distx = 200;
 
-        for (int i = 1; i < 8; i++) {
-            if (i % 2 == 0) {
-                x -= distx * 2;
+        for (int i = 7; i > 0; i--) {
+            if (i%2==0){
+                x -= distx;
             }
 
             Enemigos* enemigo = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x+10, y-20);
             enemigos.append(enemigo);
-            Enemigos* enemigo2 = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x+10, y-20);
-            enemigos.append(enemigo2);
             x += distx;
             y += disty;
 

@@ -35,7 +35,7 @@ void MainWindow::cargarnivel()
     juego.crearplataformas(nronivel);
     for (Obstaculos* plataforma : juego.getplataformas())  {
         scene->addItem(plataforma);
-    }
+        }
 
     cargarpersonajes();
 
@@ -94,6 +94,7 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 
 void MainWindow::cargarpersonajes()
 {
+
     juego.crearEnemigos(nronivel);
     for (Enemigos* enemigo : juego.getenemigos()) {
         scene->addItem(enemigo);
@@ -101,7 +102,7 @@ void MainWindow::cargarpersonajes()
 
     rick = new Rick(":/fuentes/personajes/Rick.png");
     scene->addItem(rick);
-    rick->setPos(200, 500);
+    rick->setPos(100, 500);
     rick->setScale(0.5);
 
 }
