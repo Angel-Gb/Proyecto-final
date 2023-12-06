@@ -1,10 +1,10 @@
 #ifndef ENEMIGOS_H
 #define ENEMIGOS_H
-#include <QPixmap>
-#include <QGraphicsPixmapItem>
 #include <QObject>
 #include <QTimer>
+#include <QtCore/qmath.h>
 #include "personajes.h"
+#include "arma.h"
 
 class Enemigos : public Personajes
 {
@@ -13,8 +13,10 @@ class Enemigos : public Personajes
 public:
 
     Enemigos(const QString &spritePath, int x, int y, QObject *parent = nullptr);
+    ~Enemigos();
     qreal getinipos() const;
-
+    void disparar();
+    void movcircular(qreal radio, qreal velangular);
 
 
 public slots:
@@ -28,6 +30,10 @@ private:
     int direccion;
     int distanciarec;
     int distanciamax;
+    QTimer *timerDisparo;
+    qreal angulo=0.0;
+
+
 
 };
 

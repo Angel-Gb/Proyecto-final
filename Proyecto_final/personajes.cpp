@@ -1,6 +1,5 @@
 #include "personajes.h"
 #include "obstaculos.h"
-#include <QGraphicsScene>
 
 Personajes::Personajes(const QString &spritePath, QObject *parent)
     : QObject{parent}
@@ -15,7 +14,6 @@ Personajes::Personajes(const QString &spritePath, QObject *parent)
 
     ancho = 64;
     alto = 84;
-
     timer->start(120);
 
     connect(timer,&QTimer::timeout,this,&Personajes::Actualizacion);
@@ -61,6 +59,50 @@ void Personajes::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWid
     }
 }
 
+void Personajes::gravedad()
+{
+    if (pos().y() < yorig) {
+        velocidadY += 0.5;
+        setPos(pos().x(), pos().y() + velocidadY);
+        checkcol();
+    } else {
+        velocidadY = 0;
+        setPos(pos().x(), yorig);
+    }
+}
+
+void Personajes::salto()
+{
+    if (!saltando) {
+        qreal alsalto  = 150.0;
+        qreal velsalto  = 10.0;
+
+        saltando = true;
+
+        QTimer *tsalto = new QTimer(this);
+        connect(tsalto, &QTimer::timeout, this, [=]() {
+            qreal nuevalt = pos().y() - velsalto ;
+
+            if (nuevalt < yorig - alsalto ) {
+                nuevalt = yorig - alsalto ;
+            }
+
+            setPos(pos().x(), nuevalt);
+            checkcol();
+            gravedad();
+
+            if (nuevalt >= yorig) {
+                saltando = false;
+                setPos(pos().x(), yorig);
+                tsalto->stop();
+                tsalto->deleteLater();
+            }
+        });
+
+        tsalto->start(20);
+    }
+}
+
 
 void Personajes::checkcol()
 {
@@ -71,35 +113,17 @@ void Personajes::checkcol()
 
         if (dynamic_cast<Obstaculos*>(item)) {
             saltando = false;
-            setPos(anpos);
+
+
+            if (dynamic_cast<Obstaculos*>(item)) {
+                qreal nuevaY = item->pos().y() - boundingRect().height()/4;
+                yorig = nuevaY;
+                setPos(pos().x(), nuevaY);
+
+            }
+
             return;
         }
-    }
-}
-
-
-void Personajes::salto()
-{
-    if (!saltando) {
-
-        qreal alsalto = 150;
-        qreal velsalto = 7.0;
-
-        setPos(pos().x(), pos().y() - alsalto);
-        saltando = true;
-
-        QTimer *tsalto = new QTimer(this);
-        connect(tsalto, &QTimer::timeout, this, [=]() {
-            setPos(pos().x(), pos().y() + velsalto);
-            checkcol();
-            if (pos().y() >= yorig) {
-                saltando = false;
-                setPos(pos().x(), yorig);
-                tsalto->stop();
-                tsalto->deleteLater();
-            }
-        });
-        tsalto->start(30);
     }
 }
 
