@@ -1,5 +1,4 @@
 #include "arma.h"
-#include <QGraphicsScene>
 Arma::Arma(Rick *personaje, QObject *parent)
     : QObject(parent), QGraphicsPixmapItem(), personaje(personaje)
 {
@@ -11,7 +10,7 @@ void Arma::disparar()
 {
     QPointF principalpos = personaje->getpos();
     Personajes::Dir direccionDisparo = personaje->diract;
-    QGraphicsPixmapItem *proyectil = new QGraphicsPixmapItem(QPixmap(":/fuentes/entorno/Shot.png"));
+    QGraphicsPixmapItem *proyectil = new QGraphicsPixmapItem(QPixmap(":/fuentes/entorno/ShotN.png"));
     proyectil->setPos(principalpos.x(), principalpos.y());
     proyectil->setScale(0.5);
 
@@ -60,3 +59,4 @@ void Arma::disparar()
     });
     timerproy->start(30);
 }
+

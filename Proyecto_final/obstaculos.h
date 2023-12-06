@@ -2,7 +2,6 @@
 #define OBSTACULOS_H
 
 #include <QGraphicsPixmapItem>
-#include <QPixmap>
 
 class Obstaculos : public QGraphicsPixmapItem
 {

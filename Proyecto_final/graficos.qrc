@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>fuentes/entorno/Armas.png</file>
         <file>fuentes/entorno/B2.png</file>
         <file>fuentes/entorno/B1.png</file>
         <file>fuentes/entorno/P1.png</file>
@@ -20,5 +19,6 @@
         <file>fuentes/personajes/Enemy7.png</file>
         <file>fuentes/personajes/Enemy8.png</file>
         <file>fuentes/entorno/Shot.png</file>
+        <file>fuentes/entorno/ShotN.png</file>
     </qresource>
 </RCC>
