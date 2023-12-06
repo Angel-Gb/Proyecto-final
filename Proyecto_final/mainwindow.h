@@ -34,7 +34,7 @@ private:
     Juego juego;
     void cargarnivel();
     void cargarpersonajes();
-    int nronivel=2;
+    int nronivel=1;
     Arma *arma;
     Rick *rick;
     float x,y,ancho,alto;

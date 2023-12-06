@@ -87,7 +87,6 @@ void Juego::crearEnemigos(int nronivel)
         Enemigos* enemigofinal = new Enemigos(":/fuentes/personajes/Enemy8.png", 20 , 20);
         enemigos.append(enemigofinal);
 
-        // Inicia el movimiento circular
         enemigofinal->movcircular(50, 0.1);
 
 
