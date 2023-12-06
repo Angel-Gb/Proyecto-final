@@ -12,7 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
     arma = new Arma(rick);
     scene->addItem(arma);
     arma->startTimer(30);
+
 }
+
+
+
 
 void MainWindow::cargarnivel()
 {

@@ -20,8 +20,7 @@ public:
     QTimer *timer;
     QPixmap *pixmap;
 
-    //nuevo
-    int puntosVida;
+
 
     float filas,columnas;
     float ancho;
@@ -34,14 +33,12 @@ public:
 
 
 signals:
-    //nuevo
-    void personajeEliminado(Personajes* personaje);
+
 
 public slots:
     void Actualizacion();
     void salto();
-    //nuevo
-    void verificarColisionConProyectil();
+
 
 private:
     bool saltando;

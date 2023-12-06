@@ -2234,7 +2234,9 @@ release/personajes.o: ../Proyecto_final/personajes.cpp ../Proyecto_final/persona
 		C:/Qt/6.5.2/mingw_64/include/QtGui/qfont.h \
 		C:/Qt/6.5.2/mingw_64/include/QtGui/qfontmetrics.h \
 		../Proyecto_final/obstaculos.h \
-		C:/Qt/6.5.2/mingw_64/include/QtWidgets/QGraphicsPixmapItem
+		C:/Qt/6.5.2/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/6.5.2/mingw_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/6.5.2/mingw_64/include/QtWidgets/qgraphicsscene.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\personajes.o ..\Proyecto_final\personajes.cpp
 
 release/rick.o: ../Proyecto_final/rick.cpp ../Proyecto_final/rick.h \

@@ -28,6 +28,7 @@ public:
 protected:
     void keyPressEvent(QKeyEvent *event);
 
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
@@ -38,6 +39,7 @@ private:
     Arma *arma;
     Rick *rick;
     float x,y,ancho,alto;
+
 
 };
 #endif // MAINWINDOW_H

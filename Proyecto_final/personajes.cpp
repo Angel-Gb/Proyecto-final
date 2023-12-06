@@ -102,25 +102,4 @@ void Personajes::salto()
         tsalto->start(30);
     }
 }
-// nuevo
-void Personajes::verificarColisionConProyectil() {
-    QList<QGraphicsItem*> items = scene()->collidingItems(this);
-    foreach(QGraphicsItem* item, items) {
-        if (QVariant(item->data(0)).toString() == "proyectil") {
-            // Suponiendo que cada proyectil quita 1 punto de vida
-            puntosVida -= 1;
-            scene()->removeItem(item);
-            delete item;
 
-            if (puntosVida <= 0) {
-                // señal para manejar la eliminación
-                emit personajeEliminado(this);  // Suponiendo que tienes esta señal en la clase Personajes
-                scene()->removeItem(this);
-                delete this;
-                return;
-            }
-        }
-    }
-}
-
- //llamar a este método en el ciclo principal
