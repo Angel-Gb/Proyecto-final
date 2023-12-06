@@ -2,8 +2,6 @@
 #define RICK_H
 #include "personajes.h"
 
-#include <QKeyEvent>
-
 class Rick: public Personajes
 {
     Q_OBJECT

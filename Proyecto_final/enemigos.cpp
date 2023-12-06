@@ -1,5 +1,6 @@
 #include "enemigos.h"
 #include <QGraphicsScene>
+#include <QtCore/qmath.h>
 
 Enemigos::Enemigos(const QString &spritePath, int x, int y, QObject *parent)
     : Personajes(spritePath, parent), timerDisparo(new QTimer(this))
@@ -47,8 +48,8 @@ void Enemigos::disparar()
     scene()->addItem(proyectiln);
     proyectiln->setScale(0.5);
 
-    QTimer *timerProyectil = new QTimer(this);
-    connect(timerProyectil, &QTimer::timeout, this, [=]() {
+    QTimer *timerpr = new QTimer(this);
+    connect(timerpr, &QTimer::timeout, this, [=]() {
         qreal velProy = 5.0;
         proyectiln->setPos(proyectiln->x() + velProy, proyectiln->y());
 
@@ -66,8 +67,8 @@ void Enemigos::disparar()
                 scene()->removeItem(proyectiln);
                 delete proyectiln;
 
-                timerProyectil->stop();
-                timerProyectil->deleteLater();
+                timerpr->stop();
+                timerpr->deleteLater();
                 return;
             }
         }
@@ -75,11 +76,31 @@ void Enemigos::disparar()
         if (proyectiln->x() > scene()->sceneRect().right() || proyectiln->y() > scene()->sceneRect().bottom()) {
             scene()->removeItem(proyectiln);
             delete proyectiln;
-            timerProyectil->stop();
-            timerProyectil->deleteLater();
+            timerpr->stop();
+            timerpr->deleteLater();
         }
     });
 
 
-    timerProyectil->start(100);
+    timerpr->start(100);
 }
+
+
+void Enemigos::movcircular(qreal radio, qreal velangular) {
+    QTimer* tmovc = new QTimer(this);
+    connect(tmovc, &QTimer::timeout, this, [=]() {
+        qreal nuevaX = scene()->width() - radio * qCos(angulo) - boundingRect().width() / 2;
+        qreal nuevaY = radio * qSin(angulo) + boundingRect().height() / 2;
+
+        setPos(nuevaX, nuevaY);
+
+        angulo += velangular;
+
+        if (angulo >= 2 * M_PI) {
+            angulo = 0.0;
+        }
+    });
+
+    tmovc->start(30);
+}
+

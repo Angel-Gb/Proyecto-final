@@ -1,7 +1,5 @@
 #ifndef ENEMIGOS_H
 #define ENEMIGOS_H
-#include <QPixmap>
-#include <QGraphicsPixmapItem>
 #include <QObject>
 #include <QTimer>
 #include "personajes.h"
@@ -17,6 +15,8 @@ public:
     ~Enemigos();
     qreal getinipos() const;
     void disparar();
+    void movcircular(qreal radio, qreal velangular);
+
 
 public slots:
 
@@ -30,6 +30,10 @@ private:
     int distanciarec;
     int distanciamax;
     QTimer *timerDisparo;
+    qreal angulo=0.0;
+
+
+
 };
 
 #endif // ENEMIGOS_H

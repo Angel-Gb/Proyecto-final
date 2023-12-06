@@ -1,6 +1,7 @@
 #include "juego.h"
 #include <QPixmap>
 #include <QApplication>
+
 Juego::Juego()
 {
 
@@ -80,9 +81,16 @@ void Juego::crearEnemigos(int nronivel)
             Enemigos* enemigo = new Enemigos(":/fuentes/personajes/Enemy" + QString::number(i) + ".png", x+10, y-20);
             enemigos.append(enemigo);
             x += distx;
-            y += disty;
+            y += disty;            
 
         }
+        Enemigos* enemigofinal = new Enemigos(":/fuentes/personajes/Enemy8.png", 20 , 20);
+        enemigos.append(enemigofinal);
+
+        // Inicia el movimiento circular
+        enemigofinal->movcircular(50, 0.1);
+
+
     }
 }
 
