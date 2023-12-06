@@ -20,6 +20,6 @@
         <file>fuentes/personajes/Enemy7.png</file>
         <file>fuentes/personajes/Enemy8.png</file>
         <file>fuentes/entorno/Shot.png</file>
-        <file>fuentes/entorno/ShotR.png</file>
+        <file>fuentes/entorno/ShotN.png</file>
     </qresource>
 </RCC>

@@ -159,7 +159,7 @@ debug/qrc_graficos.cpp: ../Proyecto_final/graficos.qrc \
 		../Proyecto_final/fuentes/personajes/Enemy2.png \
 		../Proyecto_final/fuentes/personajes/Enemy6.png \
 		../Proyecto_final/fuentes/entorno/P4.png \
-		../Proyecto_final/fuentes/entorno/ShotR.png \
+		../Proyecto_final/fuentes/entorno/ShotN.png \
 		../Proyecto_final/fuentes/entorno/Armas.png \
 		../Proyecto_final/fuentes/entorno/P3.png \
 		../Proyecto_final/fuentes/entorno/P7.png \

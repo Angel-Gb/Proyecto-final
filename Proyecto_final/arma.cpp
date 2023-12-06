@@ -11,7 +11,7 @@ void Arma::disparar()
 {
     QPointF principalpos = personaje->getpos();
     Personajes::Dir direccionDisparo = personaje->diract;
-    QGraphicsPixmapItem *proyectil = new QGraphicsPixmapItem(QPixmap(":/fuentes/entorno/ShotR.png"));
+    QGraphicsPixmapItem *proyectil = new QGraphicsPixmapItem(QPixmap(":/fuentes/entorno/ShotN.png"));
     proyectil->setPos(principalpos.x(), principalpos.y());
     proyectil->setScale(0.5);
 
