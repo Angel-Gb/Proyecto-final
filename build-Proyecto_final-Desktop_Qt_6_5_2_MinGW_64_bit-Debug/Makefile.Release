@@ -160,7 +160,6 @@ release/qrc_graficos.cpp: ../Proyecto_final/graficos.qrc \
 		../Proyecto_final/fuentes/personajes/Enemy6.png \
 		../Proyecto_final/fuentes/entorno/P4.png \
 		../Proyecto_final/fuentes/entorno/ShotN.png \
-		../Proyecto_final/fuentes/entorno/Armas.png \
 		../Proyecto_final/fuentes/entorno/P3.png \
 		../Proyecto_final/fuentes/entorno/P7.png \
 		../Proyecto_final/fuentes/entorno/Shot.png \
@@ -1422,26 +1421,7 @@ release/mainwindow.o: ../Proyecto_final/mainwindow.cpp ../Proyecto_final/mainwin
 		../Proyecto_final/arma.h \
 		../Proyecto_final/rick.h \
 		D:/Qt/5.12.2/mingw73_64/include/QtGui/QList \
-		ui_mainwindow.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsView \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsview.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qscrollarea.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGridLayout \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgridlayout.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlayout.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qboxlayout.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMenuBar \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmenubar.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmenu.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qaction.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qactiongroup.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/QStatusBar \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/qstatusbar.h \
-		D:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Proyecto_final\mainwindow.cpp
 
 release/obstaculos.o: ../Proyecto_final/obstaculos.cpp ../Proyecto_final/obstaculos.h \

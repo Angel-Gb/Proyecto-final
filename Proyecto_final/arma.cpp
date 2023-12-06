@@ -1,5 +1,4 @@
 #include "arma.h"
-#include <QGraphicsScene>
 Arma::Arma(Rick *personaje, QObject *parent)
     : QObject(parent), QGraphicsPixmapItem(), personaje(personaje)
 {

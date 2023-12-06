@@ -1,6 +1,4 @@
 #include "juego.h"
-#include <QPixmap>
-#include <QApplication>
 
 Juego::Juego()
 {

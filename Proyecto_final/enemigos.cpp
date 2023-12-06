@@ -1,6 +1,4 @@
 #include "enemigos.h"
-#include <QGraphicsScene>
-#include <QtCore/qmath.h>
 
 Enemigos::Enemigos(const QString &spritePath, int x, int y, QObject *parent)
     : Personajes(spritePath, parent), timerDisparo(new QTimer(this))

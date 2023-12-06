@@ -3,6 +3,7 @@
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
+#include <QGraphicsScene>
 #include "enemigos.h"
 #include "rick.h"
 

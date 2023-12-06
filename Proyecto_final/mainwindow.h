@@ -9,11 +9,11 @@
 #include <QScreen>
 #include <QApplication>
 #include "juego.h"
-
 #include "personajes.h"
 #include "rick.h"
 #include "arma.h"
 QT_BEGIN_NAMESPACE
+
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 

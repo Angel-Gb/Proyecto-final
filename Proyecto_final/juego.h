@@ -1,8 +1,8 @@
 #ifndef JUEGO_H
 #define JUEGO_H
+#include <QList>
 #include "obstaculos.h"
 #include "enemigos.h"
-#include <QList>
 
 
 class Juego

@@ -2,6 +2,7 @@
 #define ENEMIGOS_H
 #include <QObject>
 #include <QTimer>
+#include <QtCore/qmath.h>
 #include "personajes.h"
 #include "arma.h"
 
